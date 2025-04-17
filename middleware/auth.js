@@ -1,5 +1,5 @@
 function auth(req, res, next) {
-    const publicRoutes = [/^\/login$/, /^\/register$/, /^(?:\/admin).*$/]
+    const publicRoutes = [/^\/login$/, /^\/register$/, /^(?:\/admin).*$/, /^\/api\/item$/, /^\/api\/order$/, /^\/images\/.*$/, /^\/assets\/.*$/]
 
     for (let r of publicRoutes) {
         if (r.test(req.path)) {
